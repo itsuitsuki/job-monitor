@@ -1,0 +1,49 @@
+{
+  "name": "pi-job-monitor",
+  "version": "0.1.0",
+  "description": "Persistent command and job monitoring for Pi and Codex through MCP.",
+  "type": "module",
+  "license": "MIT",
+  "author": "itsu",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/itsuitsuki/job-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsuitsuki/job-monitor/issues"
+  },
+  "homepage": "https://github.com/itsuitsuki/job-monitor#readme",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-mcp",
+    "job-monitor",
+    "monitoring"
+  ],
+  "files": [
+    ".codex-plugin",
+    "extensions",
+    "scripts/*.py",
+    "scripts/launch_job_monitor_mcp",
+    ".mcp.json",
+    "README.md",
+    "README.ja.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/job-monitor.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.84.0 <1"
+  },
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests -v",
+    "check": "npm test"
+  }
+}

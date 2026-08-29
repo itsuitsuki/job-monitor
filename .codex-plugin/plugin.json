@@ -1,0 +1,26 @@
+{
+  "name": "job-monitor",
+  "version": "0.1.2+codex.20260827070909",
+  "description": "Monitor commands and long-running jobs with persistent state, deduplicated events, Paseo notifications, and structured local or SSH probes.",
+  "author": {
+    "name": "itsu"
+  },
+  "interface": {
+    "displayName": "Job Monitor",
+    "shortDescription": "Monitor changed states and notify the originating agent.",
+    "longDescription": "Run persistent command watchers that deduplicate state changes, notify the originating Paseo agent once per observed state, and exit on terminal states without notification retry spam. Also register local or SSH jobs and inspect tmux, processes, GPUs, Slurm, logs, and artifacts.",
+    "developerName": "itsu",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP tools",
+      "Background monitoring",
+      "Paseo events",
+      "SSH"
+    ],
+    "defaultPrompt": [
+      "Monitor this command and notify me only when its state changes.",
+      "Show active monitors and their latest state."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
